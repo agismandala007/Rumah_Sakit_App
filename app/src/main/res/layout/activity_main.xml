@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="288dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="60dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/oasismedical"/>
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_search">
+
+        <EditText
+            android:id="@+id/pencarian"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:background="@null"
+            android:fontFamily="@font/poppins_light_italic"
+            android:hint="Pencarian..."
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <RelativeLayout
+            android:layout_width="3dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rounded_block" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="pencarian"
+            android:src="@drawable/search"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="3dp"
+            android:alpha="0.9"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="540dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_kategori">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/black"
+            android:text="Kategori"
+            android:textSize="40sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="445dp"
+            android:background="@drawable/rounded_kategori_sub"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/rskai"
+                android:onClick="onClick"
+                android:layout_width="325dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+                android:backgroundTint="#ec335c"
+                android:text="Rumah Sakit Khusus Ibu dan Anak"
+                android:textColor="@color/black"
+                android:textSize="18dp"/>
+
+            <Button
+                android:id="@+id/rsj"
+                android:onClick="onClick"
+                android:layout_width="325dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="30dp"
+                android:backgroundTint="#ec335c"
+                android:text="Rumah Sakit Jiwa"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/rsud"
+                android:onClick="onClick"
+                android:layout_width="325dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="30dp"
+                android:backgroundTint="#ec335c"
+                android:text="Rumah Sakit Umum Daerah"
+                android:textColor="@color/black"
+                android:textSize="18dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
