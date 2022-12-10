@@ -20,8 +20,6 @@ public class DataHelper extends SQLiteOpenHelper {
 
         String sqlKeluarga = "create table pasien(nik integer primary key, nama text, ttl text, jk text, alamat text, nomor integer);";
         db.execSQL(sqlKeluarga);
-//        sql = "INSERT INTO biodata (no, nama, tgl, jk, alamat) VALUES ('1001', 'Fathur', '1994-02-03', 'Laki-laki','Jakarta');";
-//        db.execSQL(sql);
     }
     @Override
     public void onUpgrade(SQLiteDatabase arg0, int arg1, int arg2)

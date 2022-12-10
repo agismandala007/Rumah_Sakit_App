@@ -19,8 +19,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout konsultasi, pendaftaran, list, pembayaran;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view){
-        Button sakitJiwa, ibuAnak, umumDaerah;
-        EditText pencarian;
-
         String addr = "";
-
-        ibuAnak  = (Button) findViewById(R.id.rskai);
-        sakitJiwa = (Button) findViewById(R.id.rsj);
-        umumDaerah = (Button) findViewById(R.id.rsud);
 
         switch (view.getId()){
             case R.id.rsj:
@@ -57,30 +48,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onFitur(View view){
-        konsultasi = (LinearLayout) findViewById(R.id.konsul);
-        pendaftaran = (LinearLayout) findViewById(R.id.daftar);
-        list = (LinearLayout) findViewById(R.id.list);
-        pembayaran = (LinearLayout) findViewById(R.id.bayar);
-
         switch (view.getId()){
             case R.id.konsul:
-                Toast toast = Toast.makeText(MainActivity.this, "konsul", Toast.LENGTH_SHORT);
-                toast.show();
+                Intent menuKonsul = new Intent(MainActivity.this, Konsul.class);
+                startActivity(menuKonsul);
                 break;
 
             case R.id.daftar:
-                Toast daftar = Toast.makeText(MainActivity.this, "daftar", Toast.LENGTH_SHORT);
-                daftar.show();
+                Intent menuDaftar = new Intent(MainActivity.this, Daftar.class);
+                startActivity(menuDaftar);
                 break;
 
             case R.id.list:
-                Toast listT = Toast.makeText(MainActivity.this, "list", Toast.LENGTH_SHORT);
-                listT.show();
+                Intent menuList = new Intent(MainActivity.this, List.class);
+                startActivity(menuList);
                 break;
 
             case R.id.bayar:
-                Toast bayar = Toast.makeText(MainActivity.this, "bayar", Toast.LENGTH_SHORT);
-                bayar.show();
+                Intent menuBayar = new Intent(MainActivity.this, Bayar.class);
+                startActivity(menuBayar);
                 break;
         }
     }
