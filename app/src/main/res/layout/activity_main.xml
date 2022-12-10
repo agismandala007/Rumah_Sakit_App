@@ -18,43 +18,117 @@
         android:src="@drawable/oasismedical"/>
 
     <LinearLayout
-        android:layout_width="310dp"
-        android:layout_height="40dp"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/rounded_search">
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_atas"
+        android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/pencarian"
-            android:layout_width="220dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:background="@null"
-            android:fontFamily="@font/poppins_light_italic"
-            android:hint="Pencarian..."
-            android:inputType="text"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            android:textStyle="italic" />
+        <LinearLayout
+            android:id="@+id/konsul"
+            android:clickable="true"
+            android:onClick="onFitur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="18dp">
 
-        <RelativeLayout
-            android:layout_width="3dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/rounded_block" />
+            <ImageView
+                android:layout_width="43dp"
+                android:layout_height="40dp"
+                android:src="@drawable/konsul"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
 
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:contentDescription="pencarian"
-            android:src="@drawable/search"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="3dp"
-            android:alpha="0.9"
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Konsultasi"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/daftar"
+            android:clickable="true"
+            android:onClick="onFitur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="18dp">
+
+            <ImageView
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:src="@drawable/daftar"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pendaftaran"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/list"
+            android:clickable="true"
+            android:onClick="onFitur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="18dp">
+
+            <ImageView
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:src="@drawable/daftar_pasien"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pasien"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bayar"
+            android:clickable="true"
+            android:onClick="onFitur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="18dp">
+
+            <ImageView
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:src="@drawable/pembayaran"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pembayaran"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout

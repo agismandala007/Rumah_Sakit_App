@@ -11,61 +11,17 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    LinearLayout konsultasi, pendaftaran, list, pembayaran;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        public Button sakitJiwa, ibuAnak, umumDaerah;
-//        public EditText pencarian;
-//
-//
-//        ibuAnak  = (Button) findViewById(R.id.rskai);
-//        sakitJiwa = (Button) findViewById(R.id.rsj);
-//        umumDaerah = (Button) findViewById(R.id.rsud);
-
-
-
-//        ibuAnak.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String addr = String.format("geo: 0, 0?= %s", "Rumah Sakit Khusus Ibu dan Anak");
-//                Uri uri = Uri.parse(addr);
-//
-//                Intent cari = new Intent(Intent.ACTION_VIEW, uri);
-//                cari.setPackage("com.google.android.apps.maps");
-//                startActivity(cari);
-//            }
-//        });
-//
-//        sakitJiwa.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                String addr = String.format("geo: 0, 0?= %s", "Rumah Sakit Jiwa");
-//                Uri uri = Uri.parse(addr);
-//
-//                Intent cari = new Intent(Intent.ACTION_VIEW, uri);
-//                cari.setPackage("com.google.android.apps.maps");
-//                startActivity(cari);
-//            }
-//        });
-//
-//        umumDaerah.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Uri uri = Uri.parse("geo:0,0?q=Rumah Sakit Umum Daerah");
-//
-//                Intent cari = new Intent(Intent.ACTION_VIEW, uri);
-//                cari.setPackage("com.google.android.apps.maps");
-//                startActivity(cari);
-//            }
-//        });
 
     }
 
@@ -96,5 +52,34 @@ public class MainActivity extends AppCompatActivity {
         Uri uri = Uri.parse(addr);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
+    }
+
+    public void onFitur(View view){
+        konsultasi = (LinearLayout) findViewById(R.id.konsul);
+        pendaftaran = (LinearLayout) findViewById(R.id.daftar);
+        list = (LinearLayout) findViewById(R.id.list);
+        pembayaran = (LinearLayout) findViewById(R.id.bayar);
+
+        switch (view.getId()){
+            case R.id.konsul:
+                Toast toast = Toast.makeText(MainActivity.this, "konsul", Toast.LENGTH_SHORT);
+                toast.show();
+                break;
+
+            case R.id.daftar:
+                Toast daftar = Toast.makeText(MainActivity.this, "daftar", Toast.LENGTH_SHORT);
+                daftar.show();
+                break;
+
+            case R.id.list:
+                Toast listT = Toast.makeText(MainActivity.this, "list", Toast.LENGTH_SHORT);
+                listT.show();
+                break;
+
+            case R.id.bayar:
+                Toast bayar = Toast.makeText(MainActivity.this, "bayar", Toast.LENGTH_SHORT);
+                bayar.show();
+                break;
+        }
     }
 }
