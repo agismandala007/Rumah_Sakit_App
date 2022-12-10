@@ -36,13 +36,15 @@
             android:layout_margin="18dp">
 
             <ImageView
+                android:id="@+id/konsulImage"
                 android:layout_width="43dp"
                 android:layout_height="40dp"
                 android:src="@drawable/konsul"
                 android:adjustViewBounds="true"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter" />
 
             <TextView
+                android:id="@+id/konsulText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Konsultasi"
@@ -62,6 +64,7 @@
             android:layout_marginTop="18dp">
 
             <ImageView
+                android:id="@+id/dafarImage"
                 android:layout_width="43dp"
                 android:layout_height="43dp"
                 android:src="@drawable/daftar"
@@ -69,6 +72,7 @@
                 android:scaleType="fitCenter"/>
 
             <TextView
+                android:id="@+id/daftarText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pendaftaran"
@@ -88,6 +92,7 @@
             android:layout_margin="18dp">
 
             <ImageView
+                android:id="@+id/listImage"
                 android:layout_width="43dp"
                 android:layout_height="43dp"
                 android:src="@drawable/daftar_pasien"
@@ -95,6 +100,7 @@
                 android:scaleType="fitCenter"/>
 
             <TextView
+                android:id="@+id/listText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pasien"
@@ -114,6 +120,7 @@
             android:layout_marginTop="18dp">
 
             <ImageView
+                android:id="@+id/bayarImage"
                 android:layout_width="43dp"
                 android:layout_height="43dp"
                 android:src="@drawable/pembayaran"
@@ -121,6 +128,7 @@
                 android:scaleType="fitCenter"/>
 
             <TextView
+                android:id="@+id/bayarText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pembayaran"
@@ -133,61 +141,62 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="540dp"
+        android:layout_height="492dp"
         android:layout_marginTop="60dp"
         android:orientation="vertical"
         android:background="@drawable/rounded_kategori">
 
         <TextView
+            android:id="@+id/judul"
             android:layout_width="wrap_content"
             android:layout_height="55dp"
             android:layout_margin="20dp"
             android:fontFamily="@font/poppins_bold"
             android:textColor="@color/black"
-            android:text="Kategori"
+            android:text="RS Terdekat"
             android:textSize="40sp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="445dp"
+            android:layout_height="400dp"
             android:background="@drawable/rounded_kategori_sub"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/rskai"
-                android:onClick="onClick"
                 android:layout_width="325dp"
                 android:layout_height="65dp"
-                android:layout_marginTop="50dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
                 android:backgroundTint="#ec335c"
+                android:onClick="onClick"
                 android:text="Rumah Sakit Khusus Ibu dan Anak"
                 android:textColor="@color/black"
-                android:textSize="18dp"/>
+                android:textSize="18dp" />
 
             <Button
                 android:id="@+id/rsj"
-                android:onClick="onClick"
                 android:layout_width="325dp"
                 android:layout_height="65dp"
-                android:layout_marginTop="25dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="25dp"
                 android:backgroundTint="#ec335c"
+                android:onClick="onClick"
                 android:text="Rumah Sakit Jiwa"
                 android:textColor="@color/black"
                 android:textSize="18dp" />
 
             <Button
                 android:id="@+id/rsud"
-                android:onClick="onClick"
                 android:layout_width="325dp"
                 android:layout_height="65dp"
-                android:layout_marginTop="25dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="25dp"
                 android:backgroundTint="#ec335c"
+                android:onClick="onClick"
                 android:text="Rumah Sakit Umum Daerah"
                 android:textColor="@color/black"
-                android:textSize="18dp"/>
+                android:textSize="18dp" />
 
         </LinearLayout>
 
