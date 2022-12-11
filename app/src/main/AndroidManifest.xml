@@ -13,14 +13,21 @@
         android:theme="@style/Theme.Tugas_Proyek"
         tools:targetApi="31">
         <activity
-            android:name=".FullDaftar"
+            android:name=".Update"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Full_List"
+            android:name=".Cari"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".FullDaftar"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

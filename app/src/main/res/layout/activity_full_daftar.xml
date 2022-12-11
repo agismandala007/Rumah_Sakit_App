@@ -286,7 +286,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:text="Nama :"
+                    android:text="Nama : "
                     android:textSize="14dp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
@@ -311,7 +311,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:text="TTL :"
+                    android:text="TTL : "
                     android:textSize="14dp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
@@ -361,7 +361,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:text="Alamat :"
+                    android:text="Alamat : "
                     android:textSize="14dp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
@@ -386,7 +386,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:text="Nomer Telpon :"
+                    android:text="Nomer Telpon : "
                     android:textSize="14dp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
@@ -403,5 +403,14 @@
         </LinearLayout>
 
     </LinearLayout>
+    <Button
+        android:id="@+id/Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="260dp"
+        android:backgroundTint="#ec335c"
+        android:text="Home"/>
 
 </LinearLayout>

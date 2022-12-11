@@ -69,7 +69,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputNikPasien"
+                        android:id="@+id/updateNikPasien"
                         android:inputType="number"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputNamaPasien"
+                        android:id="@+id/updateNamaPasien"
                         android:layout_width="185dp"
                         android:layout_height="wrap_content"
                         android:textSize="12dp"/>
@@ -117,7 +117,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputTtlPasien"
+                        android:id="@+id/updateTtlPasien"
                         android:layout_width="198dp"
                         android:layout_height="wrap_content"
                         android:textSize="13dp"/>
@@ -140,7 +140,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputJkPasien"
+                        android:id="@+id/updateJkPasien"
                         android:layout_width="84dp"
                         android:layout_height="wrap_content"
                         android:textSize="12dp" />
@@ -163,7 +163,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputAlamatPasien"
+                        android:id="@+id/updateAlamatPasien"
                         android:layout_width="175dp"
                         android:layout_height="wrap_content"
                         android:textSize="12dp" />
@@ -186,7 +186,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputNomorPasien"
+                        android:id="@+id/updateNomorPasien"
                         android:inputType="number"
                         android:layout_width="122dp"
                         android:layout_height="wrap_content"
@@ -211,7 +211,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputRsPasien"
+                        android:id="@+id/updateRsPasien"
                         android:layout_width="133dp"
                         android:layout_height="wrap_content"
                         android:textSize="12dp"
@@ -264,7 +264,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputNikKeluarga"
+                        android:id="@+id/updateNikKeluarga"
                         android:inputType="number"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
@@ -289,7 +289,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputNamaKeluarga"
+                        android:id="@+id/updateNamaKeluarga"
                         android:layout_width="185dp"
                         android:layout_height="wrap_content"
                         android:textSize="12dp"/>
@@ -312,7 +312,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputTtlKeluarga"
+                        android:id="@+id/updateTtlKeluarga"
                         android:layout_width="198dp"
                         android:layout_height="wrap_content"
                         android:textSize="13dp"/>
@@ -335,7 +335,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputJkKeluarga"
+                        android:id="@+id/updateJkKeluarga"
                         android:layout_width="84dp"
                         android:layout_height="wrap_content"
                         android:textSize="12dp"/>
@@ -358,7 +358,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputAlamatKeluarga"
+                        android:id="@+id/updateAlamatKeluarga"
                         android:layout_width="175dp"
                         android:layout_height="wrap_content"
                         android:textSize="12dp"/>
@@ -381,7 +381,7 @@
                         android:textColor="@color/black"/>
 
                     <EditText
-                        android:id="@+id/inputNomorKeluarga"
+                        android:id="@+id/updateNomorKeluarga"
                         android:layout_width="122dp"
                         android:layout_height="wrap_content"
                         android:textSize="12dp"
@@ -395,14 +395,14 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/updateButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="30dp"
             android:layout_marginLeft="260dp"
             android:backgroundTint="#ec335c"
-            android:text="Kirim"
-            android:onClick="sendDaftar"/>
+            android:text="Update"/>
 
     </LinearLayout>
 </ScrollView>

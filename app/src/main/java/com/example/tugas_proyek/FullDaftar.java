@@ -2,6 +2,7 @@ package com.example.tugas_proyek;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import org.w3c.dom.Text;
 public class FullDaftar extends AppCompatActivity {
     protected Cursor cursor;
     DataHelper dbHelper;
+    Button button;
     TextView text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13;
 
     @Override
@@ -57,5 +59,14 @@ public class FullDaftar extends AppCompatActivity {
             text11.setText(cursor.getString(11).toString());
             text12.setText(cursor.getString(12).toString());
         }
+
+        button = findViewById(R.id.Home);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent home = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(home);
+            }
+        });
     }
 }

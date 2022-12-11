@@ -60,7 +60,7 @@ public class Daftar extends AppCompatActivity {
 
 
         Toast.makeText(Daftar.this,"Berhasil", Toast.LENGTH_SHORT).show();
-//        List.ls.RefreshList();
+        List.ls.RefreshList();
         finish();
     }
 }

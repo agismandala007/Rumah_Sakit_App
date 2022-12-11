@@ -27,7 +27,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/cariNama"
+
             android:layout_width="230dp"
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
@@ -42,18 +42,16 @@
             android:background="@drawable/rounded_block"/>
 
         <ImageButton
-            android:id="@+id/tombolCari"
             android:layout_width="43dp"
             android:layout_height="43dp"
             android:layout_gravity="center"
             android:layout_marginRight="8dp"
             android:background="@drawable/search"
-            android:clickable="true"
-            android:onClick="onCari"/>
+            android:clickable="true"/>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/hasilLayout"
+        android:id="@+id/hasilLayout1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/sub_judul_daftar"
