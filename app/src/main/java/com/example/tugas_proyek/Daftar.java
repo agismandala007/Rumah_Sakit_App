@@ -11,6 +11,9 @@ import android.widget.Toast;
 public class Daftar extends AppCompatActivity {
 
     DataHelper dbHelper;
+    EditText nikPasien, namaPasien, ttlPasien, jkPasien, alamatPasien, nomorPasien, rsPasien;
+    EditText nikKeluarga, namaKeluarga, ttlKeluarga, jkKeluarga, alamatKeluarga, nomorKeluarga;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,40 +22,45 @@ public class Daftar extends AppCompatActivity {
     }
 
     public void sendDaftar(View view){
-        EditText nikPasien, namaPasien, ttlPasien, jkPasien, alamatPasien, nomorPasien, rsPasien;
-        EditText nikKeluarga, namaKeluarga, ttlKeluarga, jkKeluarga, alamatKeluarga, nomorKeluarga;
 
+        dbHelper = new DataHelper(this);
         //Pasien
-        nikPasien = findViewById(R.id.inputNikPasien);
-        namaPasien = findViewById(R.id.inputNamaPasien);
-        ttlPasien = findViewById(R.id.inputTtlPasien);
-        jkPasien = findViewById(R.id.inputJkPasien);
-        alamatPasien = findViewById(R.id.inputAlamatPasien);
-        nomorPasien = findViewById(R.id.inputNomorPasien);
-        rsPasien = findViewById(R.id.inputRsPasien);
+        nikPasien = (EditText) findViewById(R.id.inputNikPasien);
+        namaPasien = (EditText) findViewById(R.id.inputNamaPasien);
+        ttlPasien = (EditText) findViewById(R.id.inputTtlPasien);
+        jkPasien = (EditText) findViewById(R.id.inputJkPasien);
+        alamatPasien = (EditText) findViewById(R.id.inputAlamatPasien);
+        nomorPasien = (EditText) findViewById(R.id.inputNomorPasien);
+        rsPasien = (EditText) findViewById(R.id.inputRsPasien);
 
         //Keluarga
-        nikKeluarga = findViewById(R.id.inputNikKeluarga);
-        namaKeluarga = findViewById(R.id.inputNamaKeluarga);
-        ttlKeluarga = findViewById(R.id.inputTtlKeluarga);
-        jkKeluarga = findViewById(R.id.inputJkKeluarga);
-        alamatKeluarga = findViewById(R.id.inputAlamatKeluarga);
-        nomorKeluarga = findViewById(R.id.inputNomorKeluarga);
+        nikKeluarga = (EditText) findViewById(R.id.inputNikKeluarga);
+        namaKeluarga = (EditText) findViewById(R.id.inputNamaKeluarga);
+        ttlKeluarga = (EditText) findViewById(R.id.inputTtlKeluarga);
+        jkKeluarga = (EditText) findViewById(R.id.inputJkKeluarga);
+        alamatKeluarga = (EditText) findViewById(R.id.inputAlamatKeluarga);
+        nomorKeluarga = (EditText) findViewById(R.id.inputNomorKeluarga);
 
+// TODO Auto-generated method stub
         SQLiteDatabase db = dbHelper.getWritableDatabase();
-        
-        //Dapatkan Nilai Pasien
-        String nikP = nikPasien.getText().toString();
-        String namaP = namaPasien.getText().toString();
-        String ttlP = ttlPasien.getText().toString();
-        String jkP = jkPasien.getText().toString();
-        String alamatP = alamatPasien.getText().toString();
-        String nomorP = nomorPasien.getText().toString();
-        String rsP = rsPasien.getText().toString();
+        db.execSQL("insert into pasien(nik, nama, ttl, jk, alamat, nomor, rs, nikKel, namaKel, ttlKel, jkKel, alamatKel, nomorKel) values('" +
+                nikPasien.getText().toString() + "','" +
+                namaPasien.getText().toString() + "','" +
+                ttlPasien.getText().toString() + "','" +
+                jkPasien.getText().toString() + "','" +
+                alamatPasien.getText().toString() + "','" +
+                nomorPasien.getText().toString() + "','" +
+                rsPasien.getText().toString() + "', '" +
+                nikKeluarga.getText().toString() + "','" +
+                namaKeluarga.getText().toString() + "','" +
+                ttlKeluarga.getText().toString() + "','" +
+                jkKeluarga.getText().toString() + "','" +
+                alamatKeluarga.getText().toString() + "','" +
+                nomorKeluarga.getText().toString() + "')");
 
 
-        db.execSQL("INSERT INTO pasien(nik, nama, ttl, jk, alamat, nomor, rs) VALUES (nikP, namaP, ttlP, jkP, alamatP, nomotP, rsP);");
-
-        Toast.makeText(getApplicationContext(),"Berhasil", Toast.LENGTH_LONG).show();
+        Toast.makeText(Daftar.this,"Berhasil", Toast.LENGTH_SHORT).show();
+//        List.ls.RefreshList();
+        finish();
     }
 }
